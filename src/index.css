@@ -1,0 +1,207 @@
+:root {
+  --main-color: #a83236; /* Deep Blue */
+  --accent-color: #a83236; /* Gold */
+  --text-color: #ffffff; /* White */
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+    
+.auth {
+  background-color: var(--main-color) !important;
+  color: var(--text-color) !important;
+}
+
+.text-main {
+  color: var(--main-color);
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.social-media div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  border: 2px solid var(--main-color);
+  cursor: pointer;
+}
+
+.btn-style {
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
+  background-color: transparent;
+  padding-block: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.btn-style:hover {
+  background-color: var(--main-color);
+  color: var(--text-color);
+}
+
+.btn-main {
+  --bs-btn-color: var(--text-color);
+  --bs-btn-bg: var(--accent-color);
+  --bs-btn-border-color: var(--accent-color);
+  --bs-btn-hover-color: var(--text-color);
+  --bs-btn-hover-bg: var(--main-color);
+}
+
+.heading {
+  position: relative;
+}
+
+.heading::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--main-color);
+  bottom: -10px;
+  left: 0;
+}
+
+@media all and (min-width: 767px) {
+  .content div:nth-child(1) {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+  .content div:nth-child(2) {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  .notFound img {
+    width: 700px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .content div:nth-child(1) {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  .content div:nth-child(2) {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .notFound img {
+    width: 310px;
+  }
+}
+
+.eyeIcon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #808080ba;
+}
+
+.fa-eye {
+  color: var(--main-color);
+}
+
+/* Navbar.css */
+.avatar-badge {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--accent-color); /* Gold */
+  color: var(--text-color); /* White */
+  font-size: 18px;
+}
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1%;
+  height: auto;
+  object-fit: cover;
+  z-index: -1;
+}
+.bg-color {
+  /* background: radial-gradient(white, #3b5998); */
+    width: 100%;
+    height: 100vh; /* Adjust the height as needed */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23913029' fill-opacity='0.8' d='M0,64L30,80C60,96,120,128,180,128C240,128,300,96,360,117.3C420,139,480,213,540,224C600,235,660,181,720,160C780,139,840,149,900,170.7C960,192,1020,224,1080,240C1140,256,1200,256,1260,234.7C1320,213,1380,171,1410,149.3L1440,128L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: cover; /* You can adjust the sizing as needed */
+}
+.bg-login {
+  padding: 5px;
+  /* margin-top: 0px; */
+  background-position: 0 0;
+  background-image: linear-gradient(
+    120deg,
+    #0a395e,
+    #4285f4,
+    #3b5998,
+    #0a395e,
+    #0a395e,
+    #4285f4 ,
+    #22668d/* #db4437, */ /* #f4b400, */ /* #0f9d58 */
+  );
+  background-size: 300%;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-name: menugradientanimation;
+}
+@keyframes menugradientanimation {
+  0% {
+    background-position: 0 0;
+  }
+  25% {
+    background-position: 50% 0;
+  }
+  50% {
+    background-position: 90% 0;
+  }
+  60% {
+    background-position: 60%;
+  }
+  80% {
+    background-position: 40%;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+/* ----------card media query */
+
+
+@media (max-width: 768px) {
+  /* Styles for small screens (e.g., mobile devices) */
+  .card {
+    max-width: 100%;
+  }
+  .col-md-5 {
+  max-width: 100%;
+
+  }
+  .col-md-5 img {
+    width: 100%; 
+    height:50%;/* Make the image inside col-md-5 100% width */
+  }
+  .col-md-7 {
+    width: 100%; /* Expand the content column to full width */
+  }
+}
+
